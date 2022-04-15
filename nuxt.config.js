@@ -48,19 +48,19 @@ export default async () => ({
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    proxy: true,
-    baseURL: isDev
-      ? `http://localhost:3000/auth`
-      : `http://localhost:8000/api/auth`,
+    // proxy: true,
+    // baseURL: isDev
+    //   ? `http://localhost:3000/auth`
+    //   : `http://localhost:8000/api/auth`,
   },
 
-  proxy: {
-    '/api/': {
-      target: 'http://localhost:8000/api/auth',
-      pathRewrite: { '^/api/': '' },
-      changeOrigin: true,
-    },
-  },
+  // proxy: {
+  //   '/api/': {
+  //     target: 'http://localhost:8000/api/auth',
+  //     pathRewrite: { '^/api/': '' },
+  //     changeOrigin: true,
+  //   },
+  // },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
