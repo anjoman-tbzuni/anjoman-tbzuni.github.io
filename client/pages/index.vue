@@ -308,9 +308,12 @@ export default Vue.extend({
       } else if (!this.body.phoneNumber) {
         this.errors.push('لطفا شماره تماس را وارد کنید');
       } else {
-        const res = this.$axios.post(`${this.baseURL}/auth`, {
-          ...this.body,
-        });
+        const res = this.$axios.post(
+          `${this.baseURL}/auth`,
+          {
+            ...this.body,
+          },
+        );
         this.pending = true;
         try {
           this.accessToken = (await res).data.access_token;
